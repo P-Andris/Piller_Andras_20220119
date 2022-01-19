@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: snow;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "h h h h"
+                         "n n n n"
+                         "ar ar ar as"
+                         "f f f f";
+    max-width: 1000px;
+    margin: auto;
+    text-align: justify;
+}
+
+header {
+    grid-area: h;
+    font-weight: bold;
+    color: green;
+}
+
+nav {
+    grid-area: n;
+    background-color: green;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+nav ul li a:hover {
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+}
+
+article {
+    grid-area: ar;
+}
+
+#tarolo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #e8e6e6;
+    text-align: left;
+}
+
+#tarolo {
+    padding: 10px;
+}
+
+.info-box {
+    background-color: white;
+}
+
+#tarolo img {
+    width: 75%;
+    border: 1px solid gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 10px 70px 10px 10px;
+}
+
+table tr:first-child td {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #e8e6e6;
+}
+
+aside {
+    grid-area: as;
+}
+
+aside div img {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+footer {
+    grid-area: f;
+    text-align: center;
+    padding: 10px;
+    color: green;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-areas: "h"
+                             "n"
+                             "ar"
+                             "as"
+                             "f";
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+        display: block;
+    }
+}
